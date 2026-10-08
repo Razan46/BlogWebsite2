@@ -1,0 +1,17 @@
+{% extends 'master.html' %}
+
+{% block content %}
+
+<h2>Comments</h2>
+
+<ul>
+    {% for comment in comments %}
+        <li>
+            Post {{ comment.post.id }} -
+            {{ comment.user.username }}:
+            {{ comment.content }}
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
